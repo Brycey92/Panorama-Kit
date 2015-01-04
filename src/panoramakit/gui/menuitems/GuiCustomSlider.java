@@ -56,7 +56,8 @@ public class GuiCustomSlider extends GuiButton implements HoverTips
 	@Override
 	public void drawButton(Minecraft par1Minecraft, int mouseX, int mouseY)
 	{
-		if (drawButton && displayString == null) {
+		if (//drawButton &&
+		 displayString == null) {
 			updateDisplayString();
 		}
 		
@@ -68,7 +69,7 @@ public class GuiCustomSlider extends GuiButton implements HoverTips
 	 * this button and 2 if it IS hovering over this button.
 	 */
 	@Override
-	protected int getHoverState(boolean par1)
+	public int getHoverState(boolean par1)
 	{
 		return 0;
 	}
@@ -80,7 +81,7 @@ public class GuiCustomSlider extends GuiButton implements HoverTips
 	@Override
 	protected void mouseDragged(Minecraft mc, int x, int y)
 	{
-		if (drawButton) {
+		//if (drawButton) {
 			if (dragged) {
 				updateValue(x);
 			}
@@ -91,7 +92,7 @@ public class GuiCustomSlider extends GuiButton implements HoverTips
 			
 			drawTexturedModalRect(xPosition + sliderPos, yPosition, 0, 66, 4, 20);
 			drawTexturedModalRect(xPosition + sliderPos + sliderWidth, yPosition, 196, 66, 4, 20);
-		}
+		//}
 	}
 	
 	/**
@@ -159,6 +160,6 @@ public class GuiCustomSlider extends GuiButton implements HoverTips
 	public boolean isHovered()
 	{
 		if(!enabled) return false;
-		return field_82253_i; // field_82253_i translates to "isHovered"
+		return field_146123_n; // field_82253_i translates to "isHovered"
 	}
 }

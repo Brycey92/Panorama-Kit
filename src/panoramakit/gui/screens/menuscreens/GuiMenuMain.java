@@ -4,6 +4,8 @@
 package panoramakit.gui.screens.menuscreens;
 
 import java.util.ArrayList;
+
+import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import panoramakit.gui.screens.settingsscreens.GuiSettingsMod;
@@ -68,7 +70,7 @@ public class GuiMenuMain extends GuiScreen
 	public void drawScreen(int x, int y, float z)
 	{
 		drawDefaultBackground();
-		drawCenteredString(fontRenderer, screenTitle, width / 2, height / 6 - 18, 0xffffff);
+		drawCenteredString(mc.fontRenderer, screenTitle, width / 2, height / 6 - 18, 0xffffff);
 		super.drawScreen(x, y, z);
 	}
 	

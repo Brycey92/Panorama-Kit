@@ -39,8 +39,10 @@ public class Zipper
 			}
 		}
 		
-		if(!zipFile.getParentFile().exists()) zipFile.mkdirs();
-		zipFile.createNewFile();
+		if(!zipFile.getParentFile().exists()){
+			//zipFile.mkdirs();
+
+			zipFile.createNewFile();}
 		
 		// create the output stream to zip file result
 		FileOutputStream fileOut = new FileOutputStream(zipFile); 

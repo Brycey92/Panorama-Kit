@@ -46,7 +46,7 @@ public class RenderTask extends Task
 			chat.print("panoramakit.renderfail", ex);
 		}
 		// Render a clean image to hide what was just rendered.
-		mc.entityRenderer.updateCameraAndRender(0);
+		mc.entityRenderer.updateCameraAndRender(1);
 		setCompleted();
 	}
 	

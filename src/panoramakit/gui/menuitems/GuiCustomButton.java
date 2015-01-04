@@ -87,7 +87,7 @@ public class GuiCustomButton extends GuiButton implements HoverTips
 	public boolean isHovered()
 	{
 		if(!enabled) return false;
-		return field_82253_i; // field_82253_i translates to "isHovered"
+		return field_146123_n; // field_82253_i translates to "isHovered"
 	}
 	
 }

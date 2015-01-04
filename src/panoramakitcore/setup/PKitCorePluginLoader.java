@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
  */
 @TransformerExclusions({ "panoramakitcore" })
 @MCVersion(VersionInfo.MC_VERSION)
-public class PKitCorePluginLoader implements IFMLLoadingPlugin
+public abstract class PKitCorePluginLoader implements IFMLLoadingPlugin
 {
 	
 	@Override
@@ -30,13 +30,7 @@ public class PKitCorePluginLoader implements IFMLLoadingPlugin
 	{
 		return "panoramakitcore.setup.PKitCoreModContainer";
 	}
-	
-	@Override
-	public String[] getLibraryRequestClass()
-	{
-		return null;
-	}
-	
+
 	@Override
 	public String getSetupClass()
 	{

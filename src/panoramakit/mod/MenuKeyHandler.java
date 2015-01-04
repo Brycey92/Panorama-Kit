@@ -1,7 +1,7 @@
 /* 
  * This code isn't copyrighted. Do what you want with it. :) 
  */
-package panoramakit.mod;
+package panoramakit.mod;/*
 
 import java.util.EnumSet;
 import net.minecraft.client.Minecraft;
@@ -19,7 +19,9 @@ import panoramakit.gui.settings.SharedSettings;
  * 
  * @author dayanto
  */
-public class MenuKeyHandler extends KeyHandler
+
+public class MenuKeyHandler {} //extends KeyHandler
+/*
 {
 	public static final KeyBinding MENU_KEY = new KeyBinding("key.panoramakit.menu", Keyboard.KEY_P);
 	public static final KeyBinding RENDER_KEY = new KeyBinding("key.panoramakit.rendertest", Keyboard.KEY_K);
@@ -67,4 +69,4 @@ public class MenuKeyHandler extends KeyHandler
 	{
 		return getClass().getSimpleName();
 	}
-}
+}*/

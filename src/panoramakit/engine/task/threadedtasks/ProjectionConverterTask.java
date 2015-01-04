@@ -7,6 +7,7 @@ import net.minecraft.client.settings.GameSettings;
 import panoramakit.converter.ProjectionConverter;
 import panoramakit.engine.task.ThreadedTask;
 import panoramakit.mod.MenuKeyHandler;
+import panoramakit.mod.PanoramaKit;
 
 public class ProjectionConverterTask extends ThreadedTask
 {
@@ -19,7 +20,7 @@ public class ProjectionConverterTask extends ThreadedTask
 	@Override
 	public void performThreaded() throws Exception
 	{
-		chat.print("panoramakit.process", GameSettings.getKeyDisplayString(MenuKeyHandler.MENU_KEY.keyCode));
+		chat.print("panoramakit.process", GameSettings.getKeyDisplayString(PanoramaKit.MENU_KEY.getKeyCode()));
 		projectionConverter.setProgressTracker(progressTracker);
 		projectionConverter.convert();
 		chat.print("panoramakit.saveimage", projectionConverter.getImageName());

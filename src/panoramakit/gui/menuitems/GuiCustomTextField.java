@@ -4,6 +4,7 @@
 package panoramakit.gui.menuitems;
 
 import static org.lwjgl.input.Keyboard.*;
+
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiTextField;
 
