@@ -25,7 +25,7 @@ public class ZipTask extends ThreadedTask
 	public void performThreaded() throws Exception
 	{
 		chat.print("Zipping...");
-		Zipper.zipFolder(folder, zipFile);
+		Zipper.zipFolder(folder.toPath(), zipFile.toPath());
 		chat.print("Saved as " + zipFile.getName());
 	}
 }

@@ -61,7 +61,7 @@ public class CodeTransformer implements IClassTransformer
 					LabelNode jumpTo = ((LineNumberNode) nextLineNumInstr).start;
 					
 					InsnList customInstrList = new InsnList();
-					customInstrList.add(new MethodInsnNode(INVOKESTATIC, "panoramakitcore/CoreStates", "isRendering", "()Z"));
+					customInstrList.add(new MethodInsnNode(INVOKESTATIC, "panoramakitcore/CoreStates", "isRendering", "()Z", false));
 					customInstrList.add(new JumpInsnNode(IFNE, jumpTo));
 					mn.instructions.insertBefore(instruction, customInstrList);
 					break;
