@@ -21,7 +21,7 @@ import panoramakit.mod.PanoramaKit;
  */
 public abstract class GuiScreenSettings extends GuiScreen
 {
-	protected static Minecraft mc = Minecraft.getMinecraft();
+	//protected static Minecraft mc = Minecraft.getMinecraft();
 	
 	private String screenLabel;
 	protected ArrayList<GuiCustomTextField> textFieldList = new ArrayList<GuiCustomTextField>();

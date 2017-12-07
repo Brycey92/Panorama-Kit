@@ -17,6 +17,7 @@ public class GuiCustomSliderOrientation extends GuiCustomSlider
 		super(id, x, y, settingsScreen, baseString, tipMessage, min, max, step, value);
 	}
 	
+	@Override
 	public void updateDisplayString()
 	{
 		// limit the value to the 0 -> 360 range

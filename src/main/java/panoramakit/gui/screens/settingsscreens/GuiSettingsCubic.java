@@ -193,6 +193,7 @@ public class GuiSettingsCubic extends GuiScreenSettings
 	/**
 	 * Called whenever a textfield has been updated
 	 */
+	 @override
 	public void textFieldUpdated(GuiCustomTextField textField, int id, String value)
 	{
 		int intValue = -1;

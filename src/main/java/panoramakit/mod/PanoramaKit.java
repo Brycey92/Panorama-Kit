@@ -4,12 +4,8 @@
 package panoramakit.mod;
 
 import java.io.File;
-import java.util.ArrayList;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.IChatComponent;
 import net.minecraftforge.common.config.Configuration;
 import panoramakit.gui.PreviewRenderer;
 import panoramakit.gui.settings.ModSettings;

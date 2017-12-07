@@ -16,6 +16,7 @@ public class GuiCustomSliderSample extends GuiCustomSlider
 		super(id, x, y, settingsScreen, baseString, tipMessage, min, max, step, value);
 	}
 	
+	@Override
 	public void updateDisplayString() 
 	{
 		// modify the display string by adding an x after the value.

@@ -253,6 +253,7 @@ public class GuiSettingsStereographic extends GuiScreenSettings
 	/**
 	 * Called whenever a textfield has been updated
 	 */
+	 @Override
 	public void textFieldUpdated(GuiCustomTextField textField, int id, String value)
 	{
 		int intValue = -1;
