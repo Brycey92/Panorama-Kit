@@ -1,5 +1,5 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.gui.menuitems;
 
@@ -71,8 +71,9 @@ public class GuiCustomButton extends GuiButton implements HoverTips
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see panoramakit.gui.menuitems.HoverTips#getTipMessage()
+	/**
+	 * Returns the tip message that is displayed when this button is hovered. Implements
+	 * HoverTips, that is used in my custom menus.
 	 */
 	@Override
 	public String getTipMessage()
@@ -80,14 +81,15 @@ public class GuiCustomButton extends GuiButton implements HoverTips
 		return tipMessage;
 	}
 
-	/* (non-Javadoc)
-	 * @see panoramakit.gui.menuitems.HoverTips#isHovered()
+	/**
+	 * Whether or not this button is hovered. Implements HoverTips, that is used in my
+	 * custom menus
 	 */
 	@Override
 	public boolean isHovered()
 	{
-		if(!enabled) return false;
-		return field_146123_n; // field_82253_i translates to "isHovered"
+		// TODO make sure that the variable is correct. The current variable is merely a guess
+		return enabled && hovered; // Translates to 'isHovered'
 	}
 	
 }

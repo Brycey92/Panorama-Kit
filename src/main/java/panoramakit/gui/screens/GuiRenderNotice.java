@@ -1,5 +1,5 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.gui.screens;
 
@@ -36,7 +36,7 @@ public class GuiRenderNotice extends GuiScreen
 		}
 		
 		drawDefaultBackground();
-		drawCenteredString(mc.fontRenderer, message, width / 2, height / 2, 0xe0e0e0);
+		drawCenteredString(fontRendererObj, message, width / 2, height / 2, 0xe0e0e0);
 		
 		hasDrawn = true;
 	}

@@ -1,5 +1,5 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. Do what you want with it. :)
  */
 package panoramakit.gui.settings;
 
@@ -17,7 +17,7 @@ public class EquirectSettings
 	private final Configuration config = pk.getConfig();
 	
 	private static final int DEF_RESOLUTION = 500;
-	private static final double DEF_SAMPLE_SIZE = 1.0;
+	private static final double DEF_SAMPLE_SIZE = 2.0;
 	private static final double DEF_ANGLE = 0.0;
 	
 	private Property resolution;

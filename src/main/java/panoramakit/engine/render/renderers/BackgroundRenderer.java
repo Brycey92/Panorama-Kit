@@ -1,12 +1,13 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.engine.render.renderers;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import net.minecraftforge.fml.common.FMLLog;
 import javax.imageio.ImageIO;
 import panoramakit.engine.render.CompositeImageRenderer;
 import panoramakit.mod.PanoramaKit;
@@ -17,9 +18,6 @@ import panoramakit.mod.PanoramaKit;
  */
 public class BackgroundRenderer extends CompositeImageRenderer
 {
-	
-	private final Logger L = PanoramaKit.instance.L;
-	
 	// settings
 	private int resolution;
 	private File folderPath;
@@ -59,7 +57,7 @@ public class BackgroundRenderer extends CompositeImageRenderer
 			saveBackgroundImage(image, 4 + i/2);
 		}
 		
-		L.info("Background render: " + (System.currentTimeMillis() - startTime) + "ms");
+		FMLLog.info("Background render: " + (System.currentTimeMillis() - startTime) + "ms");
 	}
 	
 	public void saveBackgroundImage(BufferedImage image, int pieceNumber) throws IOException {

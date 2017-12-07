@@ -1,9 +1,11 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.engine.task.tasks;
 
-import java.util.logging.Level;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import net.minecraftforge.fml.common.FMLLog;
 import panoramakit.engine.task.Task;
 import panoramakit.mod.PanoramaKit;
 import net.minecraft.client.Minecraft;
@@ -28,10 +30,10 @@ public class DisplayGuiScreenTask extends Task
 	{
 		try {
 			mc.displayGuiScreen(guiScreen.newInstance());
-			// render a clean frame immedaitely to hide the transition.
-			mc.entityRenderer.updateCameraAndRender(0);
+			// render a clean frame immediately to hide the transition.
+			mc.entityRenderer.updateCameraAndRender(0, 0/*?*/);
 		} catch (Exception e) {
-			PanoramaKit.instance.L.log(Level.SEVERE, "Failed to swap screen: ", e);
+			FMLLog.log(Level.ERROR, "Failed to swap screen: ", e);
 		}
 		setCompleted();
 	}

@@ -1,5 +1,5 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.gui.screens.settingsscreens;
 
@@ -32,7 +32,7 @@ public class GuiSettingsMod extends GuiScreenSettings
 	/**
 	 * Adds the buttons (and other controls) to the screen in question.
 	 */
-	@SuppressWarnings("unchecked")
+	//@SuppressWarnings("unchecked")
 	@Override
 	public void initGui()
 	{
@@ -65,7 +65,7 @@ public class GuiSettingsMod extends GuiScreenSettings
 	public void drawScreen(int x, int y, float z)
 	{
 		drawDefaultBackground();
-		drawCenteredString(mc.fontRenderer, screenTitle, width / 2, height / 6 - 18, 0xffffff);
+		drawCenteredString(fontRendererObj, screenTitle, width / 2, height / 6 - 18, 0xffffff);
 		super.drawScreen(x, y, z);
 	}
 	

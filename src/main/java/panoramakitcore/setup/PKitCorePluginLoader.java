@@ -1,13 +1,14 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakitcore.setup;
 
 import java.util.Map;
+
 import panoramakit.mod.VersionInfo;
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin.MCVersion;
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
+import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
+import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.MCVersion;
+import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
 
 /**
  * PKCPluginLoader
@@ -30,7 +31,7 @@ public abstract class PKitCorePluginLoader implements IFMLLoadingPlugin
 	{
 		return "panoramakitcore.setup.PKitCoreModContainer";
 	}
-
+	
 	@Override
 	public String getSetupClass()
 	{
@@ -40,5 +41,10 @@ public abstract class PKitCorePluginLoader implements IFMLLoadingPlugin
 	@Override
 	public void injectData(Map<String, Object> data)
 	{}
+
+	@Override
+	public String getAccessTransformerClass() {
+		return null;
+	}
 	
 }

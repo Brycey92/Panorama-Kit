@@ -1,5 +1,5 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.gui.settings;
 
@@ -18,7 +18,7 @@ public class StereographicSettings
 	
 	private static final int DEF_PANORAMA_WIDTH = 1920;
 	private static final int DEF_PANORAMA_HEIGHT = 1080;
-	private static final double DEF_SAMPLE_SIZE = 1.0;
+	private static final double DEF_SAMPLE_SIZE = 2.0;
 	private static final double DEF_FIELD_OF_VIEW = 90.0;
 	private static final double DEF_ANGLE = 90.0;
 	

@@ -1,8 +1,9 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.gui.screens.settingsscreens;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -58,7 +59,7 @@ public abstract class GuiScreenSettings extends GuiScreen
 	 * KeyListener.keyTyped(KeyEvent e).
 	 */
 	@Override
-	protected void keyTyped(char character, int keyCode)
+	protected void keyTyped(char character, int keyCode) throws IOException
 	{
 		// make sure it's always possible to escape out of a menu that lacks a back button
 		super.keyTyped(character, keyCode);
@@ -98,7 +99,7 @@ public abstract class GuiScreenSettings extends GuiScreen
 	 * Called when the mouse is clicked.
 	 */
 	@Override
-	protected void mouseClicked(int par1, int par2, int par3)
+	protected void mouseClicked(int par1, int par2, int par3) throws IOException
 	{
 		super.mouseClicked(par1, par2, par3);
 		for (GuiTextField textfield : textFieldList) {
@@ -169,7 +170,7 @@ public abstract class GuiScreenSettings extends GuiScreen
 		// display an overlay if we're about to render a preview (it stays on the screen while it's rendering)
 		if(capturingPreview){
 			drawDefaultBackground();
-			drawCenteredString(mc.fontRenderer, "Rendering Preview...", width / 2, height / 2, 0xe0e0e0);
+			drawCenteredString(fontRendererObj, "Rendering Preview...", width / 2, height / 2, 0xe0e0e0);
 			
 			// waits one frame, so that what's drawn has been displayed to the screen before letting the rendering start.
 			if(hasDrawnOverlayMessage) {

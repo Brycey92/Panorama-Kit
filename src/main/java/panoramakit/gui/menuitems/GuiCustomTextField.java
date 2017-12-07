@@ -1,5 +1,5 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.gui.menuitems;
 
@@ -27,7 +27,7 @@ public class GuiCustomTextField extends GuiTextField
 	
 	public GuiCustomTextField(FontRenderer fontRenderer, int id, int xPos, int yPos, int width, int height, boolean onlyNumbers)
 	{
-		super(fontRenderer, xPos, yPos, width, height);
+		super(0/*?*/, fontRenderer, xPos, yPos, width, height);
 		this.id = id;
 		this.onlyNumbers = onlyNumbers;
 		

@@ -1,14 +1,14 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakitcore.setup;
 
 import java.util.Arrays;
 import panoramakit.mod.VersionInfo;
 import com.google.common.eventbus.EventBus;
-import cpw.mods.fml.common.DummyModContainer;
-import cpw.mods.fml.common.LoadController;
-import cpw.mods.fml.common.ModMetadata;
+import net.minecraftforge.fml.common.DummyModContainer;
+import net.minecraftforge.fml.common.LoadController;
+import net.minecraftforge.fml.common.ModMetadata;
 
 /**
  * PKCModContainer
@@ -26,7 +26,7 @@ public class PKitCoreModContainer extends DummyModContainer
 		myMeta.version = VersionInfo.VERSION;
 		myMeta.authorList = Arrays.asList(new String[] { "Dayanto" });
 		myMeta.description = "Enables Panorama Kit to capture images properly";
-		myMeta.url = "http://www.minecraftforum.net/topic/792414-panorama-kit/";
+		myMeta.url = "http://bit.ly/panorama-kit/";
 	}
 	
 	public boolean registerBus(EventBus eb, LoadController lc)

@@ -1,10 +1,11 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.engine.task.tasks;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import net.minecraftforge.fml.common.FMLLog;
 import net.minecraft.client.Minecraft;
 import panoramakit.engine.render.CompositeImageRenderer;
 import panoramakit.engine.task.Task;
@@ -19,11 +20,9 @@ import panoramakitcore.CoreStates;
 public class RenderTask extends Task
 {
 	private final Minecraft mc = Minecraft.getMinecraft();
-	private final Logger L = PanoramaKit.instance.L;
 	
 	// the active image renderer
 	private CompositeImageRenderer imageRenderer;
-	boolean hasRendered = false;
 	
 	public RenderTask(CompositeImageRenderer imageRenderer)
 	{
@@ -37,16 +36,19 @@ public class RenderTask extends Task
 		if (mc.currentScreen != null) {
 			return;
 		}
-		
+
+		mc.entityRenderer.updateCameraAndRender(0, 0/*?(Port 1.8)*/);
+
 		try {
-			L.info("Rendering screenshot");
+			FMLLog.info("Rendering screenshot");
 			imageRenderer.render();
 		} catch (Exception ex) {
-			L.log(Level.SEVERE, "Render failed: " + ex.getMessage(), ex);
-			chat.print("panoramakit.renderfail", ex);
+			FMLLog.log(Level.ERROR, "Render failed: " + ex.getMessage(), ex);
+			chat.printTranslated("panoramakit.renderfail", ex.getMessage());
 		}
 		// Render a clean image to hide what was just rendered.
-		mc.entityRenderer.updateCameraAndRender(1);
+		//mc.entityRenderer.updateCameraAndRender(1); //1.7.10 code
+		mc.entityRenderer.updateCameraAndRender(0, 0/*?(Port 1.8)*/);
 		setCompleted();
 	}
 	
@@ -60,12 +62,6 @@ public class RenderTask extends Task
 	public void finish()
 	{
 		CoreStates.setRenderState(false);
-	}
-	
-	@Override
-	public double getProgress()
-	{
-		return 0;
 	}
 	
 	@Override

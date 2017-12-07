@@ -1,5 +1,5 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.engine.render;
 
@@ -46,7 +46,7 @@ public class TiledScreenshot
 		// allocate buffers
 		captureBuffer = BufferUtils.createIntBuffer(tileWidth * tileHeight);
 		screenshot = new int[fullWidth * fullHeight];
-		
+
 		camZoom = (double) fullHeight / (double) tileHeight;
 		
 		// if the zoom is 1.0, Minecraft ignores camera offsets, so... :/
@@ -75,7 +75,7 @@ public class TiledScreenshot
 					era.setCameraOffsetY(camOfsY);
 				}
 				
-				mc.entityRenderer.updateCameraAndRender(partialTicks);
+				mc.entityRenderer.updateCameraAndRender(partialTicks, 0/*?*/);
 				
 				// reset buffer position
 				captureBuffer.clear();

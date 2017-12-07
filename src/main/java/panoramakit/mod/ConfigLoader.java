@@ -1,13 +1,15 @@
 /* 
- * This code isn't copyrighted. Do what you want with it. :) 
+ * This code is in the public domain. You are free to do whatever you want with it. :)
  */
 package panoramakit.mod;
 
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import net.minecraftforge.fml.common.FMLLog;
+import net.minecraftforge.common.config.Configuration;
 
 /**
  * Based on Mineshot's MineshotConfig
@@ -17,8 +19,6 @@ import java.util.logging.Logger;
 public class ConfigLoader
 {
 	
-	private static final Logger L = PanoramaKit.instance.L;
-	
 	public static Configuration getConfig(File configFile)
 	{
 		Configuration config;
@@ -26,8 +26,8 @@ public class ConfigLoader
 		try {
 			config = new Configuration(configFile);
 		} catch (RuntimeException ex) {
-			L.log(Level.WARNING, "Error in configuration file:" + ex.getMessage(), ex);
-			L.log(Level.WARNING, "Loading fail-safe defaults");
+			FMLLog.log(Level.WARN, "Error in configuration file:" + ex.getMessage(), ex);
+			FMLLog.log(Level.WARN, "Loading fail-safe defaults");
 			
 			File configFileFS = new File(configFile.getParentFile(), "failsafe_" + configFile.getName());
 			if (configFileFS.exists()) {
